@@ -1,3 +1,10 @@
-* {
-  background-color: red;
+.over-header {
+  background-color: #0282F9;
+  color: #FFFFF2;
+}
+
+.jumbo {
+  height: 350px;
+  background-size: cover;
+  background-image: url("../img/jumbotron.jpg");
 }

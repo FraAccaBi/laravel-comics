@@ -212,6 +212,60 @@ return [
         "writers" => [
             "Joëlle Jones"
         ],
-    ],]
+    ],],
+    'navbar'=>[
+        
+            [
+                "id"=> 1,
+                "href" =>'#',
+                "text" => 'Characters'
+            ],
+            [
+                "id" => 2,
+                "href" => '#',
+                "text" => 'Comics'
+            ],
+            [
+                "id" => 3,
+                "href" => '#',
+                "text" => 'Movies'
+            ],
+            [
+                "id" => 4,
+                "href" => '#',
+                "text" => 'Tv'
+            ],
+            [
+                "id" => 5,
+                "href" => '#',
+                "text" => 'Games'
+            ],
+            [
+                "id" => 6,
+                "href" => '#',
+                "text" => 'Collectibles'
+            ],
+            [
+                "id" => 7,
+                "href" => '#',
+                "text" => 'Video'
+            ],
+            [
+                "id" => 8,
+                "href" => '#',
+                "text" => 'Fan'
+            ],
+            [
+                "id" => 9,
+                "href" => '#',
+                "text" => 'News'
+            ],
+            [
+                "id" => 10,
+                "href" => '#',
+                "text" => 'Shop'
+            ],
+        
+    ]
 ];
 
