@@ -73,9 +73,18 @@ Route::get('/shop', function () {
     $navbar = config('db.navbar');
     return view('shop', compact('navbar'));
 })->name('shop');
-Route::get('/comics/{id}', function ($id) {
+Route::get('/comics/{title}/', function ($title) {
     $comics = config('db.comics');
-    $comic = $comics[$id];
+    $comic = null;
+    foreach($comics as $dbComic){        
+        if($dbComic['title'] == urldecode($title)){
+            $comic = $dbComic;
+            break;
+        }
+    }
+    if($comic == null){
+        abort(404);
+    }
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
     return view('comic', compact('navbar', 'comic'));
