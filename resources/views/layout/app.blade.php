@@ -8,14 +8,21 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
     </head>
     <body>
-        @include('partials.logo')
-        @include('partials.header')
-
+        <div class="over-header text-light text-uppercase ">
+            <div class="container d-flex justify-content-end">
+                    <div class="visa-link p-1">dc power visa </div>
+                    <div class="dc-sites p-1">additional dc sites</div>
+            </div>
+        </div>
+        <div class="container">
+            @include('partials.header')
+        </div>
         <main>
             @yield('content')
         </main>
@@ -27,13 +34,3 @@
                 
     </body>
 </html>
-<!-- <header id="site_header">
-
-    @include('partials.logo')
-    <nav class="nav justify-content-center">
-        <a class="nav-link active" href="{{route('home')}}">Home</a>
-        <a class="nav-link" href="{{route('products')}}">Prodotti</a>
-        <a class="nav-link" href="{{route('news')}}">News</a>
-
-    </nav>
-</header> -->

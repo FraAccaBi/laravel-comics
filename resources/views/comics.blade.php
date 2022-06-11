@@ -1,7 +1,5 @@
 @extends('layout.app')
-
-@section('content')
-<div class="jumbo"></div>
+    @section('content')
     <div class="container">
        
         <div class="row">
@@ -18,6 +16,5 @@
        
                
     </div>
-    
-@endsection
-    
+        
+    @endsection

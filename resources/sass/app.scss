@@ -16,3 +16,9 @@ $dc-text-grey: #797777;
     background-size: cover;
     background-image: url("../img/jumbotron.jpg");
 }
+nav{
+    height: 80px;
+    &>a>img{
+        height: 65px;
+    }
+}
