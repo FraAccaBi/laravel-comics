@@ -18,60 +18,82 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $comics = config('db.comics');
     $navbar = config('db.navbar');
-    return view('home', compact('comics', 'navbar'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+    return view('home', compact('comics', 'navbar', 'links', 'cards'));
 })->name('home');
 
 Route::get('/characters', function () {
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
-    return view('characters', compact('navbar'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+    return view('characters', compact('navbar', 'links', 'cards'));
 })->name('characters');
 Route::get('/comics', function () {
     $name = Route::currentRouteName();
     $comics = config('db.comics');
     $navbar = config('db.navbar');
+    $links = config('db.links');
+    $cards = config('db.cards');
     return view('comics', compact('navbar', 'comics'));
 })->name('comics');
 
 Route::get('/movies', function () {
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
-    return view('movies', compact('navbar'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+    return view('movies', compact('navbar', 'links', 'cards'));
 })->name('movies');
 Route::get('/tv', function () {
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
-    return view('tv', compact('navbar'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+    return view('tv', compact('navbar', 'links', 'cards'));
 })->name('tv');
 Route::get('/games', function () {
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
-    return view('games', compact('navbar'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+    return view('games', compact('navbar', 'links', 'cards'));
 })->name('games');
 Route::get('/collectibles', function () {
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
-    return view('collectibles', compact('navbar'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+    return view('collectibles', compact('navbar', 'links', 'cards'));
 })->name('collectibles');
 Route::get('/video', function () {
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
-    return view('video', compact('navbar'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+    return view('video', compact('navbar', 'links', 'cards'));
 })->name('video');
 Route::get('/fan', function () {
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
-    return view('fan', compact('navbar'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+    return view('fan', compact('navbar', 'links', 'cards'));
 })->name('fan');
 Route::get('/news', function () {
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
-    return view('news', compact('navbar'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+    return view('news', compact('navbar', 'links', 'cards'));
 })->name('news');
 Route::get('/shop', function () {
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
-    return view('shop', compact('navbar'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+    return view('shop', compact('navbar', 'links', 'cards'));
 })->name('shop');
 Route::get('/comics/{title}/', function ($title) {
     $comics = config('db.comics');
@@ -87,7 +109,10 @@ Route::get('/comics/{title}/', function ($title) {
     }
     $name = Route::currentRouteName();
     $navbar = config('db.navbar');
-    return view('comic', compact('navbar', 'comic'));
+    $links = config('db.links');
+    $cards = config('db.cards');
+
+    return view('comic', compact('navbar', 'comic', 'links', 'cards'));
 })->name('comic');
 
 

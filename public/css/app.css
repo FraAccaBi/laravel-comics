@@ -15,3 +15,8 @@ nav {
 nav > a > img {
   height: 65px;
 }
+
+.adv {
+  height: 200px;
+  width: 200px;
+}
