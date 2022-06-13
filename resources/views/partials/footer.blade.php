@@ -1,5 +1,5 @@
 <footer id="site_footer">
-    <div class="container-fluid footer-top">
+    <section class="container-fluid footer-top">
             <div class="container">
                 <ul class="row row-cols-5 list-unstyled">
                     @foreach ($links as $link)
@@ -10,33 +10,32 @@
                     @endforeach
                 </ul>
             </div>
-    </div>
-    <div class="container-fluid footer-main">
+    </section>
+    <section class="container-fluid footer-main">
         <div class="container">
-            <div class="row">
+            <div class="row text-light">
                 
                 <div class="col-4 row-cols-3 d-flex flex-wrap"> 
-                    <div class="col">
+                    
                         @foreach ($cards as $card)
-                        <span> 
+                        <span class="text-uppercase"> 
                             {{ $card['name']}} 
                         </span>
-                        <ul class="list-unstyled">
+                        
                             @foreach ($card['links'] as $link)
-                            <li>
+                            <p>
                                 {{ $link }}
-                            </li>
+                            </p>
                             @endforeach 
-                        </ul> 
+                         
                         @endforeach
-                    </div>
+                    
                       
                 </div>
-                
-        </div>
-        
-    </div>
-    <div class="container-fluid footer-bottom">
+            </div>    
+        </div>   
+    </section>
+    <section class="container-fluid footer-bottom">
             <div class="container">
                 <div class="row">
                     <div class="button col">
@@ -47,5 +46,5 @@
                     </div>
                 </div>
             </div>
-    </div>
+    </section>
 </footer>
