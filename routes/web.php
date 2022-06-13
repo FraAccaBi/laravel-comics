@@ -36,7 +36,7 @@ Route::get('/comics', function () {
     $navbar = config('db.navbar');
     $links = config('db.links');
     $cards = config('db.cards');
-    return view('comics', compact('navbar', 'comics'));
+    return view('comics', compact('navbar', 'comics', 'cards', 'links'));
 })->name('comics');
 
 Route::get('/movies', function () {
